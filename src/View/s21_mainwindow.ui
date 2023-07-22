@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>s21_MainWindow</class>
+ <widget class="QMainWindow" name="s21_MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1050</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1050</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1050</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>s21_MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(40, 40, 40);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="Increase">
+    <property name="geometry">
+     <rect>
+      <x>757</x>
+      <y>357</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);
+border-radius: 10px;
+background-color: rgb(64, 64, 64);</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Decrease">
+    <property name="geometry">
+     <rect>
+      <x>757</x>
+      <y>411</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);
+border-radius: 10px;
+background-color: rgb(64, 64, 64);</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Reset">
+    <property name="geometry">
+     <rect>
+      <x>735</x>
+      <y>754</y>
+      <width>59</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);
+border-radius: 17px;
+background-color: rgb(64, 64, 64);</string>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ShowMenu">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>780</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);
+border-radius: 1px;
+background-color: rgb(64, 64, 64);</string>
+    </property>
+    <property name="text">
+     <string>↑</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="SettingsTab">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>350</y>
+      <width>211</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(30, 30, 30);
+border-radius: 17px;
+background-color: rgb(30, 30, 30);
+border-color: rgb(30, 30, 30)</string>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Projection">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <attribute name="title">
+      <string>Projection</string>
+     </attribute>
+     <widget class="QPushButton" name="LittleProjection">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+      <property name="text">
+       <string>Central</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="BigProjection">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>88</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+      <property name="text">
+       <string>Parallel</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Vertex">
+     <attribute name="title">
+      <string>Vertex</string>
+     </attribute>
+     <widget class="QLabel" name="VertexColorL">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+      <property name="text">
+       <string>Vertex color</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="VertexSizeL">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+      <property name="text">
+       <string>Vertex size</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="VertexType">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>154</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+      <property name="text">
+       <string>Vertex type</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="VertexColor">
+      <property name="geometry">
+       <rect>
+        <x>156</x>
+        <y>36</y>
+        <width>20</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border: 1px solid;
+border-color: black;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="CentralVertex">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>160</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+      <property name="text">
+       <string>Circle</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="TopVertex">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>144</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+      <property name="text">
+       <string>Absent</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="BottomVertex">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>185</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+      <property name="text">
+       <string>Square</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="VertexSize">
+      <property name="geometry">
+       <rect>
+        <x>153</x>
+        <y>90</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Edge">
+     <attribute name="title">
+      <string>Edge</string>
+     </attribute>
+     <widget class="QLabel" name="EdgeColorL">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+      <property name="text">
+       <string>Edge Color</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="EdgeThicknessL">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+      <property name="text">
+       <string>Edge thickness</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="EdgeTypeL">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>154</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+      <property name="text">
+       <string>Edge type</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="EdgeColor">
+      <property name="geometry">
+       <rect>
+        <x>156</x>
+        <y>36</y>
+        <width>20</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border: 1px solid;
+border-color: black;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="LittleEdge">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>144</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+      <property name="text">
+       <string>Dashed</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="BigEdge">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>160</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+      <property name="text">
+       <string>Solid</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="EdgeThickness">
+      <property name="geometry">
+       <rect>
+        <x>153</x>
+        <y>90</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(154, 154, 154);</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="Screenshot">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>760</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);
+border-radius: 1px;
+border-bottom: 1px solid grey;
+background-color: rgb(64, 64, 64);</string>
+    </property>
+    <property name="text">
+     <string>Screenshot</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Open">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>625</y>
+      <width>70</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);
+border-radius: 10px;
+background-color: rgb(64, 64, 64);</string>
+    </property>
+    <property name="text">
+     <string>Open</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="FilenameL">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>690</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);</string>
+    </property>
+    <property name="text">
+     <string>Filename</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CountOfVerticesL">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>730</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);</string>
+    </property>
+    <property name="text">
+     <string>Count of vertices</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CountOfEdgesL">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>770</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);</string>
+    </property>
+    <property name="text">
+     <string>Count of edges</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Filename">
+    <property name="geometry">
+     <rect>
+      <x>907</x>
+      <y>690</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CountOfVertices">
+    <property name="geometry">
+     <rect>
+      <x>947</x>
+      <y>730</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CountOfEdges">
+    <property name="geometry">
+     <rect>
+      <x>947</x>
+      <y>770</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ProjectionButton">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>310</y>
+      <width>71</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);
+border-radius: 10px;
+background-color: rgb(64, 64, 64);</string>
+    </property>
+    <property name="text">
+     <string>Projection</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="VertexButton">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>310</y>
+      <width>71</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);
+border-radius: 10px;
+background-color: rgb(64, 64, 64);</string>
+    </property>
+    <property name="text">
+     <string>Vertex</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="EdgeButton">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>310</y>
+      <width>71</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);
+border-radius: 10px;
+background-color: rgb(64, 64, 64);</string>
+    </property>
+    <property name="text">
+     <string>Edge</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JoyStickMoveL">
+    <property name="geometry">
+     <rect>
+      <x>859</x>
+      <y>31</y>
+      <width>132</width>
+      <height>132</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(30, 30, 30);
+border-radius: 17px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MoveL">
+    <property name="geometry">
+     <rect>
+      <x>885</x>
+      <y>169</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);</string>
+    </property>
+    <property name="text">
+     <string>Move camera</string>
+    </property>
+   </widget>
+   <widget class="QOpenGLWidget" name="openGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>800</width>
+      <height>800</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="BackgroundColorL">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>230</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);</string>
+    </property>
+    <property name="text">
+     <string>Background color</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BackgroundColor">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>238</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(30, 30, 30);
+border: 1px solid;
+border-color: black;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Gif">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>740</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(154, 154, 154);
+border-radius: 1px;
+border-bottom: 1px solid grey;
+background-color: rgb(64, 64, 64);</string>
+    </property>
+    <property name="text">
+     <string>Gif</string>
+    </property>
+   </widget>
+   <zorder>openGLWidget</zorder>
+   <zorder>Increase</zorder>
+   <zorder>Decrease</zorder>
+   <zorder>Reset</zorder>
+   <zorder>ShowMenu</zorder>
+   <zorder>SettingsTab</zorder>
+   <zorder>Screenshot</zorder>
+   <zorder>Open</zorder>
+   <zorder>FilenameL</zorder>
+   <zorder>CountOfVerticesL</zorder>
+   <zorder>CountOfEdgesL</zorder>
+   <zorder>Filename</zorder>
+   <zorder>CountOfVertices</zorder>
+   <zorder>CountOfEdges</zorder>
+   <zorder>ProjectionButton</zorder>
+   <zorder>VertexButton</zorder>
+   <zorder>EdgeButton</zorder>
+   <zorder>JoyStickMoveL</zorder>
+   <zorder>MoveL</zorder>
+   <zorder>BackgroundColorL</zorder>
+   <zorder>BackgroundColor</zorder>
+   <zorder>Gif</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1050</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
